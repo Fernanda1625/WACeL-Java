@@ -146,6 +146,9 @@ public class OpenNLPAnalyzer implements INLPAnalyzer {
 		}
 		//Add chunk Information
 		for(int i = 0; i < chunks.length; i++) {
+			if (tokens == null){
+				break;
+			}
 			tokens.get(i).setChunkTag(chunks[i].toString());
 		}
 		//Tokens with Chunk Info
